@@ -1,6 +1,4 @@
-﻿import React from "react"
-
-export default function App() {
+﻿export default function App() {
   return (
     <div style={{minHeight:"100vh",display:"grid",placeItems:"center",background:"#0b0b0b",color:"#eee",fontFamily:"system-ui,Segoe UI,Roboto"}}>
       <div style={{textAlign:"center"}}>
