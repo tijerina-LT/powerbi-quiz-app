@@ -1,0 +1,283 @@
+[
+  {
+    "id": "q1",
+    "type": "single",
+    "prompt": "Which feature enables dynamic fields via a slicer in Power BI?",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Bookmarks",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "Field Parameters",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "Drillthrough",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "Tooltips",
+        "isCorrect": false
+      }
+    ],
+    "tags": [
+      "PL-300",
+      "Modeling"
+    ],
+    "difficulty": "easy",
+    "scoring": {
+      "mode": "all_or_nothing",
+      "points": 1
+    },
+    "explanation": "Field Parameters let users swap dimensions/measures with a slicer."
+  },
+  {
+    "id": "q2",
+    "type": "multi",
+    "prompt": "Select all DAX iterator functions.",
+    "choices": [
+      {
+        "id": "a",
+        "text": "SUMX",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "AVERAGEX",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "MAX",
+        "isCorrect": false
+      },
+      {
+        "id": "d",
+        "text": "COUNTROWS",
+        "isCorrect": false
+      }
+    ],
+    "tags": [
+      "DAX"
+    ],
+    "difficulty": "medium",
+    "scoring": {
+      "mode": "partial",
+      "points": 2
+    },
+    "explanation": "X-functions iterate a row context over a table."
+  },
+  {
+    "id": "q3",
+    "type": "match",
+    "prompt": "Match the Power BI component to its best description.",
+    "choices": [
+      {
+        "id": "svc",
+        "text": "Power BI Service",
+        "isCorrect": false
+      },
+      {
+        "id": "desk",
+        "text": "Power BI Desktop",
+        "isCorrect": false
+      },
+      {
+        "id": "gw",
+        "text": "Gateway",
+        "isCorrect": false
+      },
+      {
+        "id": "dat",
+        "text": "Dataset",
+        "isCorrect": false
+      }
+    ],
+    "pairs": {
+      "svc": "desc1",
+      "desk": "desc2",
+      "gw": "desc3",
+      "dat": "desc4"
+    },
+    "exhibits": [
+      {
+        "title": "Descriptions",
+        "content": "desc1: hosted app for reports/dashboards; desc2: authoring tool; desc3: bridges on-prem to cloud; desc4: model+queries"
+      }
+    ],
+    "tags": [
+      "Admin"
+    ],
+    "scoring": {
+      "mode": "all_or_nothing",
+      "points": 4
+    },
+    "explanation": "Service hosts content; Desktop authors; Gateway bridges; Dataset holds model/queries."
+  },
+  {
+    "id": "q4",
+    "type": "order",
+    "prompt": "Order the steps to publish a report to the Power BI Service.",
+    "choices": [
+      {
+        "id": "step1",
+        "text": "Model data in Power BI Desktop",
+        "isCorrect": false
+      },
+      {
+        "id": "step2",
+        "text": "Create visuals and pages",
+        "isCorrect": false
+      },
+      {
+        "id": "step3",
+        "text": "Click Publish",
+        "isCorrect": false
+      },
+      {
+        "id": "step4",
+        "text": "Choose workspace",
+        "isCorrect": false
+      }
+    ],
+    "order": [
+      "step1",
+      "step2",
+      "step3",
+      "step4"
+    ],
+    "tags": [
+      "Authoring"
+    ],
+    "scoring": {
+      "mode": "all_or_nothing",
+      "points": 4
+    },
+    "explanation": "Typical authoring sequence before publishing."
+  },
+  {
+    "id": "q5",
+    "type": "matrix",
+    "prompt": "Select one correct option for each row.",
+    "matrix": {
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Gateway mode for SQL on-prem"
+        },
+        {
+          "id": "r2",
+          "label": "Feature to swap measures via slicer"
+        }
+      ],
+      "cols": [
+        {
+          "id": "c1",
+          "label": "Personal GW"
+        },
+        {
+          "id": "c2",
+          "label": "Standard GW"
+        },
+        {
+          "id": "c3",
+          "label": "Field Parameters"
+        }
+      ],
+      "correct": {
+        "r1": "c2",
+        "r2": "c3"
+      }
+    },
+    "tags": [
+      "Admin",
+      "Modeling"
+    ],
+    "scoring": {
+      "mode": "all_or_nothing",
+      "points": 2
+    },
+    "explanation": "SQL on-prem needs Standard gateway; swapping measures uses Field Parameters."
+  },
+  {
+    "id": "q6",
+    "type": "case",
+    "prompt": "Case study: Contoso quarterly reporting modernization",
+    "exhibits": [
+      {
+        "title": "Overview",
+        "content": "Contoso automates board reporting with Power BI. Needs KPI, QTD, RLS, dataflows."
+      },
+      {
+        "title": "Requirements",
+        "content": "Show QTD KPIs, compare LY, secure profit & loss by BU, refresh daily 7AM PT."
+      }
+    ],
+    "parts": [
+      {
+        "id": "q6a",
+        "type": "single",
+        "prompt": "Which DAX returns quarter-to-date?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "DATESQTD()",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "text": "ENDOFMONTH()",
+            "isCorrect": false
+          },
+          {
+            "id": "c",
+            "text": "SAMEPERIODLASTYEAR()",
+            "isCorrect": false
+          }
+        ],
+        "scoring": {
+          "mode": "all_or_nothing",
+          "points": 1
+        }
+      },
+      {
+        "id": "q6b",
+        "type": "multi",
+        "prompt": "Select features that help standardize data across reports.",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Dataflows",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "text": "Deployment pipelines",
+            "isCorrect": false
+          },
+          {
+            "id": "c",
+            "text": "Shared datasets",
+            "isCorrect": true
+          }
+        ],
+        "scoring": {
+          "mode": "partial",
+          "points": 2
+        }
+      }
+    ],
+    "tags": [
+      "CaseStudy"
+    ],
+    "scoring": {
+      "mode": "partial",
+      "points": 3
+    }
+  }
+]
